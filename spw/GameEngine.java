@@ -38,13 +38,25 @@ public class GameEngine implements KeyListener, GameReporter{
 		gp.updateGameUI(this);
 	}
 
+	void controlVehicle(KeyEvent e) {
+		switch (e.getKeyCode()) {
+		case KeyEvent.VK_LEFT:
+			v.move(-1);
+			break;
+		case KeyEvent.VK_RIGHT:
+			v.move(1);
+			break;
+
+		}
+	}
+
 	public long getScore(){
 		 return 0;
 	}
 	
 	@Override
 	public void keyPressed(KeyEvent e) {
-		//do nothing
+		controlVehicle(e);
 	}
 
 	@Override
