@@ -1,3 +1,5 @@
+package spw;
+
 import java.awt.*;
 import javax.swing.*;
 
